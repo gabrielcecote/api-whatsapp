@@ -4,7 +4,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server.js",
+    "build": "tsc",
+    "start": "node --loader ts-node/esm src/server.ts",
+    "serve": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -20,5 +22,13 @@
     "qrcode": "^1.5.4",
     "teste": "file:",
     "whatsappapi": "file:"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.0",
+    "@types/qrcode": "^1.5.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }
